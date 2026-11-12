@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>CircleHauls</AssemblyName>
+    <RootNamespace>CircleHauls</RootNamespace>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- DLL landet direkt in ..\build, von dort packt package.ps1 -->
+    <OutputPath>..\build\</OutputPath>
+    <DebugType>none</DebugType>
+
+    <!-- Pfad zum Spiel – bei Bedarf anpassen -->
+    <DvManaged>S:\SteamLibrary\steamapps\common\Derail Valley\DerailValley_Data\Managed</DvManaged>
+  </PropertyGroup>
+
+  <!-- WICHTIG: Diese DLL darf KEINE Referenz auf MultiplayerAPI.dll haben – sonst scheitert UMMs GetTypes(),
+       wenn die Multiplayer-Mod nicht installiert ist. Der MP-Teil liegt in CircleHauls.Multiplayer.dll. -->
+  <ItemGroup>
+    <!-- macht private Member aus Assembly-CSharp zugreifbar (wie bei PassengerJobs) -->
+    <PackageReference Include="Krafs.Publicizer" Version="2.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp" IncludeCompilerGeneratedMembers="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony"><HintPath>$(DvManaged)\UnityModManager\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityModManager"><HintPath>$(DvManaged)\UnityModManager\UnityModManager.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(DvManaged)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="DV.ThingTypes"><HintPath>$(DvManaged)\DV.ThingTypes.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="DV.Utils"><HintPath>$(DvManaged)\DV.Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="DV.Common"><HintPath>$(DvManaged)\DV.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="DV.Localization"><HintPath>$(DvManaged)\DV.Localization.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="DV.RailTrack"><HintPath>$(DvManaged)\DV.RailTrack.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(DvManaged)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(DvManaged)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(DvManaged)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(DvManaged)\Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(DvManaged)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(DvManaged)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(DvManaged)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>
