@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Optionale Multiplayer-Anbindung für CircleHauls (AMacro dv-multiplayer, MultiplayerAPI 1.1.0.0).
+    Wird von CircleHauls.dll nur geladen, wenn die Multiplayer-Mod aktiv ist (MpCompat).
+    Ohne Multiplayer liegt die DLL einfach unbenutzt im Mod-Ordner.
+  -->
+  <PropertyGroup>
+    <AssemblyName>CircleHauls.Multiplayer</AssemblyName>
+    <RootNamespace>CircleHauls.Multiplayer</RootNamespace>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- landet neben CircleHauls.dll in ..\build -->
+    <OutputPath>..\build\</OutputPath>
+    <DebugType>none</DebugType>
+
+    <!-- Pfade – bei Bedarf anpassen -->
+    <DvManaged>S:\SteamLibrary\steamapps\common\Derail Valley\DerailValley_Data\Managed</DvManaged>
+    <!-- MultiplayerAPI.dll aus der installierten Multiplayer-Mod (ggf. Mods.inactive\Multiplayer) -->
+    <DvMultiplayer>$(DvManaged)\..\..\Mods\Multiplayer</DvMultiplayer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CircleHauls\CircleHauls.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Nur zum Kompilieren, NICHT mitpacken: bringt die Multiplayer-Mod selbst mit -->
+    <Reference Include="MultiplayerAPI"><HintPath>$(DvMultiplayer)\MultiplayerAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(DvManaged)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityModManager"><HintPath>$(DvManaged)\UnityModManager\UnityModManager.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(DvManaged)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(DvManaged)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>
