@@ -5,6 +5,7 @@
 	"Author": "CJ187",
 	"EntryMethod": "CircleHauls.CircleHaulsMain.Load",
 	"ManagerVersion": "0.27.2",
-	"HomePage": "https://www.nexusmods.com/derailvalley/mods/",
-	"MultiplayerCompatibility": "All"
+	"LoadAfter": [ "Multiplayer" ],
+	"HomePage": "https://www.nexusmods.com/derailvalley/mods/1833",
+	"Repository": "https://github.com/gercj187/CircleHaulJobs/blob/main/repository.json"
 }

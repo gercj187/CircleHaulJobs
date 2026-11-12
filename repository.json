@@ -1,8 +1,9 @@
 {
 	"Releases": [
 		{
-			"Id": "FullCircleHauls",
-			"Version": "1.0.0",
+			"Id": "CircleHauls",
+			"Version": "1.00.00",
+			"DownloadUrl": "https://github.com/gercj187/CircleHaulJobs/releases/download/CircleHaulJobs/CircleHauls_v1.00.00.zip"
 		}
 	]
 }
