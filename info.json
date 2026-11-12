@@ -1,0 +1,10 @@
+{
+	"Id": "CircleHauls",
+	"Version": "1.00.00",
+	"DisplayName": "CircleHaulJobs",
+	"Author": "CJ187",
+	"EntryMethod": "CircleHauls.CircleHaulsMain.Load",
+	"ManagerVersion": "0.27.2",
+	"HomePage": "https://www.nexusmods.com/derailvalley/mods/",
+	"MultiplayerCompatibility": "All"
+}
