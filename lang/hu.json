@@ -56,5 +56,7 @@
   "tip.handling": "Pótdíj minden kezelésért (berakás vagy kirakás) a munkában.\n• Most: {0} kezelésenként\n• Szállítás (1): {1}\n• Elhozatal (2): {2}\n• Csere / harmadik cél (3): {3}",
   "tip.time": "Az időbónusz szorzója (minden út + tolatás).\n• Most: {0} → 60 percből {1} perc lesz\n• A LongerLoadingDelay rakodási ideje hozzáadódik",
   "tip.debug": "Részletes üzeneteket ír az UMM naplóba (munkák, átalakítások, többjátékos mód).\n• Csak teszteléshez kapcsold be",
-  "tip.staysvanilla": "normál munka marad"
+  "tip.staysvanilla": "normál munka marad",
+  "gui.combineicon": "Közös ikon az alapengedélyekhez",
+  "tip.combineicon": "A tolatást, a logisztikai szállítást és a teherszállítást EGY ikonként (DVHR S|L|F) mutatja a borítón.\n• Két engedélyhelyet takarít meg a borítón\n• Az „Elutasítva” lap továbbra is külön mutatja mindhármat, így látszik, melyik hiányzik"
 }

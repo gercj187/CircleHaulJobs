@@ -56,5 +56,7 @@
   "tip.handling": "Paga extra per movimentazione (carico o scarico) nel lavoro.\n• Attuale: {0} per movimentazione\n• Consegna (1): {1}\n• Ritiro (2): {2}\n• Scambio container / terza destinazione (3): {3}",
   "tip.time": "Moltiplicatore del bonus tempo (tutte le tratte + manovre).\n• Attuale: {0} → 60 min diventano {1} min\n• Il tempo di carico di LongerLoadingDelay si aggiunge",
   "tip.debug": "Scrive messaggi dettagliati nel log di UMM (lavori creati, conversioni, multigiocatore).\n• Attivare solo per i test",
-  "tip.staysvanilla": "resta un lavoro normale"
+  "tip.staysvanilla": "resta un lavoro normale",
+  "gui.combineicon": "Icona combinata per le licenze di base",
+  "tip.combineicon": "Mostra Manovra, Trasporto logistico e Trasporto merci come UNA icona (DVHR S|L|F) sulla copertina.\n• Risparmia due spazi licenza sulla copertina\n• Il foglio «Rifiutato» elenca ancora tutte e tre separatamente, così si vede quale manca"
 }

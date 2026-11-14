@@ -56,5 +56,7 @@
   "tip.handling": "Lisäpalkka jokaisesta käsittelystä (lastaus tai purku) tehtävässä.\n• Nyt: {0} per käsittely\n• Toimitus (1): {1}\n• Nouto (2): {2}\n• Kontinvaihto / kolmas kohde (3): {3}",
   "tip.time": "Aikabonuksen kerroin (kaikki matkat + vaihtotyö).\n• Nyt: {0} → 60 min muuttuu {1} min\n• LongerLoadingDelayn lastausaika lisätään päälle",
   "tip.debug": "Kirjoittaa yksityiskohtaisia viestejä UMM-lokiin (tehtävät, muunnokset, moninpeli).\n• Kytke päälle vain testatessa",
-  "tip.staysvanilla": "pysyy tavallisena tehtävänä"
+  "tip.staysvanilla": "pysyy tavallisena tehtävänä",
+  "gui.combineicon": "Yhdistetty kuvake peruslisensseille",
+  "tip.combineicon": "Näyttää vaihtotyön, logistisen kuljetuksen ja rahtikuljetuksen YHTENÄ kuvakkeena (DVHR S|L|F) kansilehdellä.\n• Säästää kaksi lisenssipaikkaa kansilehdellä\n• \"Hylätty\"-lehti näyttää edelleen kaikki kolme erikseen, joten näet mikä puuttuu"
 }

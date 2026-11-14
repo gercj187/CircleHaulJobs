@@ -56,5 +56,7 @@
   "tip.handling": "Dodatkowa zapłata za każdą obsługę (załadunek lub rozładunek) w zleceniu.\n• Obecnie: {0} za obsługę\n• Dostawa (1): {1}\n• Odbiór (2): {2}\n• Wymiana / trzeci cel (3): {3}",
   "tip.time": "Mnożnik premii czasowej (wszystkie kursy + manewry).\n• Obecnie: {0} → 60 min to {1} min\n• Czas załadunku z LongerLoadingDelay dochodzi osobno",
   "tip.debug": "Zapisuje szczegółowe komunikaty w dzienniku UMM (zlecenia, przekształcenia, multiplayer).\n• Włączaj tylko do testów",
-  "tip.staysvanilla": "zostaje zwykłym zleceniem"
+  "tip.staysvanilla": "zostaje zwykłym zleceniem",
+  "gui.combineicon": "Wspólna ikona licencji podstawowych",
+  "tip.combineicon": "Pokazuje Manewry, Przewóz logistyczny i Przewóz towarów jako JEDNĄ ikonę (DVHR S|L|F) na okładce.\n• Oszczędza dwa pola licencji na okładce\n• Kartka „Odrzucono” nadal pokazuje wszystkie trzy osobno, więc widać, której brakuje"
 }

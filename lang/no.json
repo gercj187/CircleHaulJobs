@@ -56,5 +56,7 @@
   "tip.handling": "Ekstra betaling per håndtering (lasting eller lossing) i oppdraget.\n• Nå: {0} per håndtering\n• Levering (1): {1}\n• Henting (2): {2}\n• Containerbytte / tredje destinasjon (3): {3}",
   "tip.time": "Faktor for tidsbonusen (alle turer + skifting).\n• Nå: {0} → 60 min blir {1} min\n• Lastetiden fra LongerLoadingDelay legges til",
   "tip.debug": "Skriver detaljerte meldinger i UMM-loggen (oppdrag, omgjøringer, flerspiller).\n• Slå bare på ved testing",
-  "tip.staysvanilla": "forblir vanlig oppdrag"
+  "tip.staysvanilla": "forblir vanlig oppdrag",
+  "gui.combineicon": "Kombinert ikon for grunnlisensene",
+  "tip.combineicon": "Viser Skifting, Logistisk transport og Godstransport som ETT ikon (DVHR S|L|F) på forsiden.\n• Sparer to lisensfelt på forsiden\n• \"Avvist\"-arket viser fortsatt alle tre hver for seg, så man ser hvilken som mangler"
 }

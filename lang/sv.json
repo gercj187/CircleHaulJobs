@@ -56,5 +56,7 @@
   "tip.handling": "Extra betalning per hantering (lastning eller lossning) i uppdraget.\n• Nu: {0} per hantering\n• Leverans (1): {1}\n• Hämtning (2): {2}\n• Containerbyte / tredje destination (3): {3}",
   "tip.time": "Faktor för tidsbonusen (alla resor + växling).\n• Nu: {0} → 60 min blir {1} min\n• Lasttiden från LongerLoadingDelay läggs till",
   "tip.debug": "Skriver detaljerade meddelanden i UMM-loggen (uppdrag, omvandlingar, multiplayer).\n• Slå bara på vid test",
-  "tip.staysvanilla": "förblir vanligt uppdrag"
+  "tip.staysvanilla": "förblir vanligt uppdrag",
+  "gui.combineicon": "Kombinerad ikon för grundlicenserna",
+  "tip.combineicon": "Visar Växling, Logistisk transport och Godstransport som EN ikon (DVHR S|L|F) på framsidan.\n• Sparar två licensfält på framsidan\n• Bladet \"Nekad\" visar fortfarande alla tre separat, så man ser vilken som saknas"
 }

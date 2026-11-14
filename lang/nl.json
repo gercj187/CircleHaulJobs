@@ -56,5 +56,7 @@
   "tip.handling": "Extra betaling per behandeling (laden of lossen) in de opdracht.\n• Nu: {0} per behandeling\n• Levering (1): {1}\n• Ophalen (2): {2}\n• Containerwissel / derde bestemming (3): {3}",
   "tip.time": "Vermenigvuldiger voor de tijdbonus (alle ritten + rangeren).\n• Nu: {0} → 60 min worden {1} min\n• De laadtijd van LongerLoadingDelay komt erbij",
   "tip.debug": "Schrijft uitgebreide meldingen naar het UMM-logboek (opdrachten, omzettingen, multiplayer).\n• Alleen aanzetten om te testen",
-  "tip.staysvanilla": "blijft normale opdracht"
+  "tip.staysvanilla": "blijft normale opdracht",
+  "gui.combineicon": "Gecombineerd icoon voor de basislicenties",
+  "tip.combineicon": "Toont Rangeren, Logistiek transport en Vrachttransport als ÉÉN icoon (DVHR S|L|F) op het voorblad.\n• Bespaart twee licentievakken op het voorblad\n• Het blad \"Geweigerd\" toont alle drie nog apart, zodat je ziet welke ontbreekt"
 }

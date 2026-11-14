@@ -56,5 +56,7 @@
   "tip.handling": "Ekstra betaling pr. håndtering (læsning eller losning) i opgaven.\n• Nu: {0} pr. håndtering\n• Levering (1): {1}\n• Afhentning (2): {2}\n• Containerbytte / tredje destination (3): {3}",
   "tip.time": "Faktor for tidsbonussen (alle ture + rangering).\n• Nu: {0} → 60 min bliver til {1} min\n• Læssetiden fra LongerLoadingDelay lægges oveni",
   "tip.debug": "Skriver detaljerede beskeder i UMM-loggen (opgaver, omdannelser, multiplayer).\n• Slå kun til ved test",
-  "tip.staysvanilla": "forbliver normal opgave"
+  "tip.staysvanilla": "forbliver normal opgave",
+  "gui.combineicon": "Kombineret ikon for grundlicenserne",
+  "tip.combineicon": "Viser Rangering, Logistisk transport og Godstransport som ÉT ikon (DVHR S|L|F) på forsiden.\n• Sparer to licensfelter på forsiden\n• \"Afvist\"-arket viser stadig alle tre hver for sig, så man kan se, hvilken der mangler"
 }

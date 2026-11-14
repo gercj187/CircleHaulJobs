@@ -56,5 +56,7 @@
   "tip.handling": "İşteki her işlem (yükleme veya boşaltma) için ek ödeme.\n• Şu an: işlem başına {0}\n• Teslimat (1): {1}\n• Teslim alma (2): {2}\n• Değişim / üçüncü hedef (3): {3}",
   "tip.time": "Zaman bonusu çarpanı (tüm seferler + manevra).\n• Şu an: {0} → 60 dk {1} dk olur\n• LongerLoadingDelay yükleme süresi eklenir",
   "tip.debug": "UMM günlüğüne ayrıntılı mesajlar yazar (işler, dönüşümler, çok oyunculu).\n• Yalnızca test için açın",
-  "tip.staysvanilla": "normal iş kalır"
+  "tip.staysvanilla": "normal iş kalır",
+  "gui.combineicon": "Temel lisanslar için birleşik simge",
+  "tip.combineicon": "Manevra, Lojistik taşıma ve Yük taşıma lisanslarını kapakta TEK simge (DVHR S|L|F) olarak gösterir.\n• Kapakta iki lisans alanı kazandırır\n• \"Reddedildi\" sayfası üçünü de ayrı ayrı göstermeye devam eder, böylece hangisinin eksik olduğu görülür"
 }

@@ -56,5 +56,7 @@
   "tip.handling": "Příplatek za každou manipulaci (nakládku nebo vykládku) v zakázce.\n• Nyní: {0} za manipulaci\n• Doručení (1): {1}\n• Vyzvednutí (2): {2}\n• Výměna / třetí cíl (3): {3}",
   "tip.time": "Násobitel časového bonusu (všechny jízdy + posun).\n• Nyní: {0} → z 60 min je {1} min\n• Čas nakládky z LongerLoadingDelay se přičítá",
   "tip.debug": "Zapisuje podrobné zprávy do logu UMM (zakázky, převody, multiplayer).\n• Zapínej jen pro testování",
-  "tip.staysvanilla": "zůstane běžnou zakázkou"
+  "tip.staysvanilla": "zůstane běžnou zakázkou",
+  "gui.combineicon": "Kombinovaná ikona základních licencí",
+  "tip.combineicon": "Zobrazí Posun, Logistickou přepravu a Nákladní přepravu jako JEDNU ikonu (DVHR S|L|F) na titulní straně.\n• Ušetří dvě licenční pole na titulní straně\n• List „Zamítnuto“ dál uvádí všechny tři zvlášť, takže je vidět, která chybí"
 }

@@ -56,5 +56,7 @@
   "tip.handling": "Extra pay per car handling (loading or unloading) in the job.\n• Currently: {0} per handling\n• Delivery (1): {1}\n• Pickup (2): {2}\n• Container swap / third destination (3): {3}",
   "tip.time": "Multiplier on the time bonus (all trips + shunting).\n• Currently: {0} → 60 min become {1} min\n• Loading time from LongerLoadingDelay is added on top",
   "tip.debug": "Writes detailed messages to the UMM log (created jobs, conversions, multiplayer).\n• Only turn on for testing",
-  "tip.staysvanilla": "stays a normal job"
+  "tip.staysvanilla": "stays a normal job",
+  "gui.combineicon": "Combined icon for the basic licenses",
+  "tip.combineicon": "Shows Shunting, Logistical Haul and Freight Haul as ONE icon (DVHR S|L|F) on the job cover.\n• Saves two license slots on the cover\n• The \"Denied\" sheet still lists all three separately, so you can see which one is missing"
 }

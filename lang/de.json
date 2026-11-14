@@ -56,5 +56,7 @@
   "tip.handling": "Zusätzlicher Lohn pro Wagenbehandlung (Beladen oder Entladen) im Auftrag.\n• Aktuell: {0} pro Behandlung\n• Zustellung (1): {1}\n• Abholung (2): {2}\n• Containertausch / drittes Ziel (3): {3}",
   "tip.time": "Faktor auf den Zeitbonus (alle Fahrten + Rangieren).\n• Aktuell: {0} → aus 60 min werden {1} min\n• Die Ladezeit von LongerLoadingDelay kommt obendrauf",
   "tip.debug": "Schreibt ausführliche Meldungen ins UMM-Log (erzeugte Aufträge, Umwandlungen, Multiplayer).\n• Nur zum Testen einschalten",
-  "tip.staysvanilla": "bleibt normaler Auftrag"
+  "tip.staysvanilla": "bleibt normaler Auftrag",
+  "gui.combineicon": "Kombi-Icon für die Grundlizenzen",
+  "tip.combineicon": "Zeigt Rangieren, Logistik und Güterverkehr als EIN Icon (DVHR S|L|F) auf dem Deckblatt.\n• Spart zwei Lizenzfelder auf dem Deckblatt\n• Das „Abgelehnt“-Blatt listet alle drei weiterhin einzeln – man sieht also, welche fehlt"
 }

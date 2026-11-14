@@ -56,5 +56,7 @@
   "tip.handling": "Pago extra por manipulación (carga o descarga) en el trabajo.\n• Actual: {0} por manipulación\n• Entrega (1): {1}\n• Recogida (2): {2}\n• Intercambio / tercer destino (3): {3}",
   "tip.time": "Multiplicador de la bonificación de tiempo (todos los trayectos + maniobras).\n• Actual: {0} → 60 min pasan a {1} min\n• El tiempo de carga de LongerLoadingDelay se suma",
   "tip.debug": "Escribe mensajes detallados en el registro de UMM (trabajos creados, conversiones, multijugador).\n• Activar solo para pruebas",
-  "tip.staysvanilla": "sigue siendo trabajo normal"
+  "tip.staysvanilla": "sigue siendo trabajo normal",
+  "gui.combineicon": "Icono combinado para las licencias básicas",
+  "tip.combineicon": "Muestra Maniobras, Transporte logístico y Transporte de carga como UN icono (DVHR S|L|F) en la portada.\n• Ahorra dos casillas de licencia en la portada\n• La hoja «Denegado» sigue mostrando las tres por separado, para ver cuál falta"
 }

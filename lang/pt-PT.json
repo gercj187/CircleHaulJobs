@@ -56,5 +56,7 @@
   "tip.handling": "Pagamento extra por manuseio (carga ou descarga) no trabalho.\n• Atual: {0} por manuseio\n• Entrega (1): {1}\n• Recolha (2): {2}\n• Troca / terceiro destino (3): {3}",
   "tip.time": "Multiplicador do bónus de tempo (todas as viagens + manobras).\n• Atual: {0} → 60 min viram {1} min\n• O tempo de carga do LongerLoadingDelay é somado",
   "tip.debug": "Grava mensagens detalhadas no log do UMM (trabalhos criados, conversões, multijogador).\n• Ative só para testes",
-  "tip.staysvanilla": "continua trabalho normal"
+  "tip.staysvanilla": "continua trabalho normal",
+  "gui.combineicon": "Ícone combinado para as licenças básicas",
+  "tip.combineicon": "Mostra Manobra, Transporte logístico e Transporte de mercadorias como UM ícone (DVHR S|L|F) na capa.\n• Poupa dois espaços de licença na capa\n• A folha \"Recusado\" continua a listar as três separadamente, para ver qual falta"
 }

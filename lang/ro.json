@@ -56,5 +56,7 @@
   "tip.handling": "Plată extra pentru fiecare manipulare (încărcare sau descărcare) din misiune.\n• Acum: {0} pe manipulare\n• Livrare (1): {1}\n• Preluare (2): {2}\n• Schimb / a treia destinație (3): {3}",
   "tip.time": "Multiplicatorul bonusului de timp (toate cursele + manevre).\n• Acum: {0} → 60 min devin {1} min\n• Timpul de încărcare din LongerLoadingDelay se adaugă",
   "tip.debug": "Scrie mesaje detaliate în jurnalul UMM (misiuni, conversii, multiplayer).\n• Activează doar pentru teste",
-  "tip.staysvanilla": "rămâne misiune normală"
+  "tip.staysvanilla": "rămâne misiune normală",
+  "gui.combineicon": "Pictogramă combinată pentru licențele de bază",
+  "tip.combineicon": "Afișează Manevra, Transportul logistic și Transportul de marfă ca O SINGURĂ pictogramă (DVHR S|L|F) pe copertă.\n• Economisește două locuri de licență pe copertă\n• Foaia „Respins” le listează în continuare pe toate trei separat, ca să vezi care lipsește"
 }

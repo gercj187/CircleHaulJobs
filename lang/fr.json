@@ -56,5 +56,7 @@
   "tip.handling": "Paie supplémentaire par manutention (chargement ou déchargement) dans la mission.\n• Actuellement : {0} par manutention\n• Livraison (1) : {1}\n• Enlèvement (2) : {2}\n• Échange de conteneurs / troisième destination (3) : {3}",
   "tip.time": "Multiplicateur du bonus de temps (tous les trajets + manœuvres).\n• Actuellement : {0} → 60 min deviennent {1} min\n• Le temps de chargement de LongerLoadingDelay s'ajoute",
   "tip.debug": "Écrit des messages détaillés dans le journal UMM (missions créées, conversions, multijoueur).\n• À activer seulement pour les tests",
-  "tip.staysvanilla": "reste une mission normale"
+  "tip.staysvanilla": "reste une mission normale",
+  "gui.combineicon": "Icône combinée pour les licences de base",
+  "tip.combineicon": "Affiche Manœuvre, Transport logistique et Transport de fret en UNE icône (DVHR S|L|F) sur la couverture.\n• Libère deux emplacements de licence sur la couverture\n• La feuille « Refusé » liste toujours les trois séparément, pour voir laquelle manque"
 }
