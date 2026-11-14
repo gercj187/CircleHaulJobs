@@ -230,7 +230,10 @@ namespace CircleHauls.Jobs
             if (lengthLicense != null) licenses.Add(lengthLicense);
             licenses.RemoveWhere(l => l == null);
 
-            flags = JobLicenseType_v2.ListToFlags(licenses);
+            // Fracht aus mehreren Etappen kann z. B. Hazmat II UND III verlangen → nur die höchste Stufe behalten
+            flags = LicenseTiers.Reduce(JobLicenseType_v2.ListToFlags(licenses));
+            var keep = flags;
+            licenses.RemoveWhere(l => ((int)keep & (int)l.v1) == 0);
             return !CircleHaulsMain.Settings.OnlyLicensedJobs || lm.IsLicensedForJob(licenses);
         }
 
