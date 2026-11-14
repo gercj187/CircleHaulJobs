@@ -1,6 +1,6 @@
 {
 	"Id": "CircleHauls",
-	"Version": "1.00.00",
+	"Version": "1.01.00",
 	"DisplayName": "CircleHaulJobs",
 	"Author": "CJ187",
 	"EntryMethod": "CircleHauls.CircleHaulsMain.Load",
