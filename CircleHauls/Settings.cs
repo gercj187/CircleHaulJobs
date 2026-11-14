@@ -24,6 +24,7 @@ namespace CircleHauls
         /// <summary>Mehr als 20 Wagen kann das Spiel aktuell nicht spawnen.</summary>
         public const int MaxCarsLimit = 20;
         public bool OnlyLicensedJobs = false;
+        public bool CombineBaseLicenses = false;
 
         // Belohnung
         public float PaymentMultiplier = 1.1f;   // auf die Summe der Einzelaufträge
@@ -73,6 +74,7 @@ namespace CircleHauls
             MaxJobsPerStation = IntSlider("gui.maxjobs", MaxJobsPerStation, 1, 5,
                 Tip("gui.maxjobs", "tip.maxjobs", MaxJobsPerStation.ToString(CultureInfo.InvariantCulture)));
             OnlyLicensedJobs = Toggle(OnlyLicensedJobs, "gui.licensed", Tip("gui.licensed", "tip.licensed"));
+            CombineBaseLicenses = Toggle(CombineBaseLicenses, "gui.combineicon", Tip("gui.combineicon", "tip.combineicon"));
 
             Header("gui.reward");
             PaymentMultiplier = FloatSlider("gui.pay", PaymentMultiplier, 1f, 4f, "x" + PaymentMultiplier.ToString("0.00"), TipPay());

@@ -48,4 +48,10 @@
     <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(DvManaged)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- Kombi-Lizenzicon DVHR S|L|F (rohe RGBA-Pixel, 256x256) – PNG daneben nur als Vorlage -->
+    <EmbeddedResource Include="Resources\license_dvhr_slf.rgba" LogicalName="CircleHauls.license_dvhr_slf.rgba" />
+    <None Include="Resources\license_dvhr_slf.png" />
+  </ItemGroup>
+
 </Project>

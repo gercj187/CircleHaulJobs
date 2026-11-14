@@ -38,6 +38,8 @@ namespace CircleHauls
             ["gui.forward"] = "Third destination (A → B → C → A)",
             ["gui.forwardchance"] = "Chance of a third destination",
             ["tip.staysvanilla"] = "stays a normal job",
+            ["gui.combineicon"] = "Combined icon for the basic licenses",
+            ["tip.combineicon"] = "Shows Shunting, Logistical Haul and Freight Haul as ONE icon (DVHR S|L|F) on the job cover.\n• Saves two license slots on the cover\n• The \"Denied\" sheet still lists all three separately, so you can see which one is missing",
             ["gui.mphost"] = "Multiplayer: these settings are set by the host.",
             ["tip.enabled"] = "Master switch for the whole mod.\n• Off: no new Circle Hauls are created\n• Jobs that already exist keep running and can be finished",
             ["tip.delivery"] = "Loaded train from your station to B, unload there, bring the empty cars straight back and park them.\n• 1 car handling (unload at B)\n• A converted loaded train becomes a delivery unless it got a third destination or a container swap\n• Off: loaded trains only become a third destination or container swap, otherwise they stay normal jobs",
