@@ -97,7 +97,38 @@ namespace CircleHauls.Booklets
 
         public static List<TemplatePaperData> CreateOverviewOnly(Job_data job)
         {
+            // Multiplayer-Client: Der Auftrag kommt von der Multiplayer-Mod oft VOR unserem Datenpaket an.
+            // Dann ein gültiges Übersichtsblatt nur aus den Job-Daten zeigen – sobald das Paket da ist, wird neu gerendert.
+            if (CircleHaulData.Get(job.ID) == null) return new List<TemplatePaperData> { CreatePlaceholderOverview(job) };
             return new List<TemplatePaperData> { CreateOverview(Extract(job), 0, 0) };
+        }
+
+        /// <summary>Übersicht ohne Zugumlauf-Daten (nur Job_data): Bahnhöfe, Wagen, Lohn, Zeit, Lizenzen – Fracht noch ohne Icons.</summary>
+        internal static TemplatePaperData CreatePlaceholderOverview(Job_data job)
+        {
+            var startInfo = job.chainOriginStationInfo;
+            var farInfo = job.chainDestinationStationInfo;
+            var cars = job.tasksData?.FirstOrDefault()?.nestedTasks?
+                .FirstOrDefault(t => t.cars != null && t.cars.Count > 0)?.cars ?? new List<Car_data>();
+
+            string timeBonus = job.timeLimit > 0f ? $"{Mathf.FloorToInt(job.timeLimit / 60f)} min" : C.NO_BONUS_TIME_LIMIT_STR;
+            string length = $"{C.GetCarsTotalLength(cars).ToString("N1", LocalizationAPI.CC)} m";
+            string mass = $"{(C.GetCarsTotalMass(cars, null) * 0.001f).ToString("N1", LocalizationAPI.CC)} t";
+            string value = $"${(C.GetTrainValue(cars, null) / 1_000_000f).ToString("N2", LocalizationAPI.CC)}m";
+            string payment = job.basePayment.ToString("N0", LocalizationAPI.CC);
+
+            return new CHFrontPaperData(null,
+                Title, string.Empty, job.ID, CHJobType.Color,
+                string.Empty, job.requiredLicenses,
+                new List<CargoType>(), null,
+                string.Empty, string.Empty, TemplatePaperData.NOT_USED_COLOR,
+                startInfo != null ? LocalizationAPI.L(startInfo.LocalizationKey) : string.Empty,
+                startInfo?.Type ?? string.Empty, startInfo?.StationColor ?? TemplatePaperData.NOT_USED_COLOR,
+                farInfo != null ? LocalizationAPI.L(farInfo.LocalizationKey) : string.Empty,
+                farInfo?.Type ?? string.Empty, farInfo?.StationColor ?? TemplatePaperData.NOT_USED_COLOR,
+                cars,
+                length, mass, value, timeBonus, payment,
+                string.Empty, string.Empty);
         }
 
         // ---------------------------------------------------------------- Seiten
