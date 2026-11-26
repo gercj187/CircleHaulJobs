@@ -1,11 +1,11 @@
 {
 	"Id": "CircleHauls",
-	"Version": "1.01.00",
+	"Version": "1.02.00",
 	"DisplayName": "CircleHaulJobs",
 	"Author": "CJ187",
 	"EntryMethod": "CircleHauls.CircleHaulsMain.Load",
 	"ManagerVersion": "0.27.2",
 	"LoadAfter": [ "Multiplayer" ],
 	"HomePage": "https://www.nexusmods.com/derailvalley/mods/1833",
-	"Repository": "https://github.com/gercj187/CircleHaulJobs/blob/main/repository.json"
+	"Repository": "https://raw.githubusercontent.com/gercj187/CircleHaulJobs/refs/heads/main/repository.json"
 }
