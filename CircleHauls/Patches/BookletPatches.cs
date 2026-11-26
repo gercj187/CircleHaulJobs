@@ -52,7 +52,9 @@ namespace CircleHauls.Patches
             catch (Exception ex)
             {
                 CircleHaulsMain.Error($"Übersicht für {job.ID} fehlgeschlagen", ex);
-                __result = new List<TemplatePaperData> { new CoverPageTemplatePaperData(job.ID, CircleHaulBooklet.Title, "", "") };
+                // Das Übersichts-Prefab kennt nur die Vorderseite (FrontPage) – ein Deckblatt bliebe leer (blaues Blatt)
+                try { __result = new List<TemplatePaperData> { CircleHaulBooklet.CreatePlaceholderOverview(job) }; }
+                catch { __result = new List<TemplatePaperData> { new CoverPageTemplatePaperData(job.ID, CircleHaulBooklet.Title, "", "") }; }
                 return false;
             }
         }
@@ -65,11 +67,14 @@ namespace CircleHauls.Patches
     [HarmonyPatch(typeof(BookletCreator_JobMissingLicense), nameof(BookletCreator_JobMissingLicense.GetMissingLicenseTemplateData))]
     internal static class BookletCreator_JobMissingLicense_Patch
     {
+        // Direkt per Reflection statt AccessTools.TypeByName/Field: TypeByName durchsucht ALLE Assemblies und schreibt
+        // bei fremden, nicht ladbaren Typen Warnungen ins Log (Log-Spam); AccessTools.Field loggt, wenn nichts gefunden wird.
+        private const BindingFlags All = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
         private static readonly Type DisplayClass =
-            AccessTools.TypeByName("DV.Booklets.BookletCreator_JobMissingLicense+<>c__DisplayClass2_0");
-        private static readonly FieldInfo JobField = AccessTools.Field(DisplayClass, "job");
-        private static readonly FieldInfo JobTypeField = AccessTools.Field(DisplayClass, "jobType");
-        private static readonly FieldInfo JobColorField = AccessTools.Field(DisplayClass, "jobColor");
+            typeof(BookletCreator_JobMissingLicense).GetNestedType("<>c__DisplayClass2_0", BindingFlags.Public | BindingFlags.NonPublic);
+        private static readonly FieldInfo JobField = DisplayClass?.GetField("job", All);
+        private static readonly FieldInfo JobTypeField = DisplayClass?.GetField("jobType", All);
+        private static readonly FieldInfo JobColorField = DisplayClass?.GetField("jobColor", All);
 
         private static bool Prepare()
         {
