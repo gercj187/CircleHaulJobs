@@ -185,11 +185,34 @@ namespace CircleHauls.Jobs
                     DV.Booklets.BookletCreator_Job.Render(booklet.gameObject, new DV.Booklets.Job_data(booklet.job));
                     CircleHaulsMain.Log($"Booklet {jobId} neu gerendert");
                 }
+
+                // Übersichtsblätter am Auftragsbrett ebenso (Multiplayer-Client: Blatt entstand vor dem Datenpaket)
+                foreach (var overview in UnityEngine.Object.FindObjectsOfType<JobOverview>())
+                {
+                    if (overview == null || overview.job == null || overview.job.ID != jobId) continue;
+                    RerenderOverview(overview);
+                    CircleHaulsMain.Log($"Übersicht {jobId} neu gerendert");
+                }
             }
             catch (Exception ex)
             {
                 CircleHaulsMain.Warning($"Booklet {jobId} konnte nicht neu gerendert werden: {ex.Message}");
             }
+        }
+
+        /// <summary>Wie BookletCreator_JobOverview.Create – nur ohne neues Blatt: Texturen des vorhandenen Blatts neu erzeugen.</summary>
+        private static void RerenderOverview(JobOverview overview)
+        {
+            var target = overview.GetComponent<DV.Booklets.Rendered.RenderedTexturesBase>();
+            var prefab = UnityEngine.Resources.Load("JobOverviewRender", typeof(UnityEngine.GameObject)) as UnityEngine.GameObject;
+            if (target == null || prefab == null) return;
+            var go = (UnityEngine.GameObject)UnityEngine.Object.Instantiate(prefab,
+                DV.RenderTextureSystem.RenderTextureSystem.Instance.transform.position, UnityEngine.Quaternion.identity);
+            var render = go.GetComponent<DV.RenderTextureSystem.BookletRender.BookletTextureRender>();
+            if (render == null) { UnityEngine.Object.Destroy(go); return; }
+            target.RegisterTexturesGeneratedEvent(render);
+            render.GenerateTextures(DV.Booklets.BookletCreator_JobOverview
+                .GetJobOverviewTemplateData(new DV.Booklets.Job_data(overview.job)).ToArray());
         }
 
         private void OnDestroy()
